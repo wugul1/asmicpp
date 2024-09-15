@@ -38,20 +38,21 @@ int main()
     const char* message = "aha okok\n";
     const char* message1 = "aha okok\n";
 
+    auto start1 = high_resolution_clock::now();
+    operator<<(cout, message1);
+    auto end1 = high_resolution_clock::now();
+    duration<double, nano> czascpp = end1 - start1;
+    
 
     auto start = high_resolution_clock::now();
     print(message);
     auto end = high_resolution_clock::now();
     duration<double, nano> czasasm = end - start;
 
-
-
-    auto start1 = high_resolution_clock::now();
-    printf(message1);
-    auto end1 = high_resolution_clock::now();
-    duration<double, nano> czascpp = end1 - start1;
-    
+   
     cout<<"czas asm: "<<czasasm.count()<<endl;
     cout<<"czas cpp: "<<czascpp.count()<<endl;
+
+    
     return 0;
 }

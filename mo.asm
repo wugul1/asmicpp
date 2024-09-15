@@ -2,11 +2,10 @@
 section .text
     global funk_asm
     global print
-    
-print:
+   
 
+print:
     mov rcx, 0 ; rejesrt na dlugosc
-    
 count_loop:
     mov al, [rdi + rcx] ; adres lancucha + dlugosc
     inc rcx
@@ -24,4 +23,5 @@ count_loop:
 funk_asm:
     mov rax, rdi
     add rax, rsi
-ret
+    ret
+
