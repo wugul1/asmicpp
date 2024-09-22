@@ -5,7 +5,7 @@ using namespace std;
 using namespace std::chrono;
 
 extern "C" int funk_asm(int a, int b);
-extern "C" void print(const char* str);
+extern "C" void print(const char *ciong);
 
 int funk_cpp(int a, int b)
 {
@@ -43,8 +43,8 @@ int main()
     
 
     auto start = high_resolution_clock::now();
+ 
     print(message);
-  
     auto end = high_resolution_clock::now();
     duration<double, nano> czasasm = end - start;
 
@@ -52,6 +52,5 @@ int main()
     cout<<"czas asm: "<<czasasm.count()<<endl;
     cout<<"czas cpp: "<<czascpp.count()<<endl;
 
-    
     return 0;
 }

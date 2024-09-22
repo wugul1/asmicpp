@@ -24,4 +24,3 @@ funk_asm:
     mov rax, rdi
     add rax, rsi
     ret
-
